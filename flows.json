@@ -1,1 +1,51 @@
-[]
+[
+    {
+        "id": "b20fd8e77bdb81fc",
+        "type": "tab",
+        "label": "api v0",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "805f1dc9e8a2d549",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "kokospgbouncer",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "hacker",
+        "databaseFieldType": "str",
+        "ssl": "true",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "",
+        "userFieldType": "str",
+        "password": "",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "eb58920ac0fb820a",
+        "type": "postgresql",
+        "z": "b20fd8e77bdb81fc",
+        "name": "",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "805f1dc9e8a2d549",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    }
+]
