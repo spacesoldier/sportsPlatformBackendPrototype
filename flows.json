@@ -2,10 +2,138 @@
     {
         "id": "b20fd8e77bdb81fc",
         "type": "tab",
+        "label": "playground",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "24167006ba3855bc",
+        "type": "tab",
         "label": "api v0",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "19e58d5ef2e60152",
+        "type": "group",
+        "z": "b20fd8e77bdb81fc",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "87d947abdb6f4e4c",
+            "f1b7c47102aae720",
+            "d8624f962d1d0162",
+            "1dabe45065eb76c3",
+            "08f93fd17064cad8",
+            "772fe6f11705442f",
+            "2f2724bc2ee73b02",
+            "8925a9fa33e768f6",
+            "52b927965abd6e19"
+        ],
+        "x": 114,
+        "y": 59,
+        "w": 792,
+        "h": 382
+    },
+    {
+        "id": "409a4189e373686a",
+        "type": "group",
+        "z": "b20fd8e77bdb81fc",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "652d95f8abc72a32",
+            "f2de41c8777a3241",
+            "e3ad2be66f665d5f",
+            "ce19a0758e52cc89",
+            "a4dd08b8d9799acf",
+            "bdce80feccfdb9da",
+            "662fcc2c8f38684c",
+            "f0c214cf6e1aaf11",
+            "aff7baf18cf9862b",
+            "6cb87f3dbfad957c",
+            "2ba81f7be1fdbb35"
+        ],
+        "x": 114,
+        "y": 499,
+        "w": 832,
+        "h": 382
+    },
+    {
+        "id": "8373f38641d4c1d9",
+        "type": "group",
+        "z": "24167006ba3855bc",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1a82fdfe9325a495",
+            "646b245fa3c455de",
+            "39f67586bc0e3696",
+            "f764108a592e8d0f",
+            "b9eb03f06ba17c42",
+            "dc655895af452377",
+            "0577b6708402b46b",
+            "2e1dedf23237c21a",
+            "11c3bd8f4b44fe4e",
+            "7e8cb3e6b75249f2"
+        ],
+        "x": 74,
+        "y": 39,
+        "w": 852,
+        "h": 382
+    },
+    {
+        "id": "18d4938afab28b78",
+        "type": "group",
+        "z": "24167006ba3855bc",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f339a3ab994bcf24",
+            "4f47ce7485273061",
+            "4aacb85b86a333bc",
+            "e3559e06f45c5877",
+            "689450b22fd54c22",
+            "4ea9988ec54bd9ac",
+            "ba15ed6b6ccca963",
+            "e7a82945fdd83c5e",
+            "974dd2d29e54b79c",
+            "75c46cc406ce5196"
+        ],
+        "x": 74,
+        "y": 479,
+        "w": 852,
+        "h": 362
     },
     {
         "id": "805f1dc9e8a2d549",
@@ -33,19 +161,838 @@
         "passwordFieldType": "str"
     },
     {
-        "id": "eb58920ac0fb820a",
-        "type": "postgresql",
+        "id": "87d947abdb6f4e4c",
+        "type": "change",
         "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "set API token",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.authorization",
+                "pt": "msg",
+                "to": "Bearer e6f654ee2eaedfee98f3c9f6962593487de780121600adf3b1bc227a1a5f8a24e986bed3b2f83faec02a748fbdd6509d7c709e8379faaf3b4454ad4a9d9d44d4704e340fd5e25e51c800cb802f11192b297ccf1410c863265e956d79254361d52f2a0751406eebc8cd59d7fe8389e7e46d5da5c5383f4736333fa0f208732a79",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "d8624f962d1d0162",
+                "08f93fd17064cad8"
+            ]
+        ]
+    },
+    {
+        "id": "f1b7c47102aae720",
+        "type": "inject",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
         "name": "",
-        "query": "SELECT * FROM ;",
-        "postgreSQLConfig": "805f1dc9e8a2d549",
-        "split": false,
-        "rowsPerMsg": 1,
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "87d947abdb6f4e4c"
+            ]
+        ]
+    },
+    {
+        "id": "d8624f962d1d0162",
+        "type": "debug",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1dabe45065eb76c3",
+        "type": "http request",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://kokoscms:1337/api/auth/local/register",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "8925a9fa33e768f6"
+            ]
+        ]
+    },
+    {
+        "id": "08f93fd17064cad8",
+        "type": "change",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "set content type",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers[\"Content-Type\"]",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "772fe6f11705442f"
+            ]
+        ]
+    },
+    {
+        "id": "772fe6f11705442f",
+        "type": "function",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "test user info",
+        "func": "msg.payload = {\n    username: \"aaaaa2\",\n    email: \"aaa2@bbb.cc\",\n    password: \"sdsfafsafsadf\"\n}\nreturn msg;",
         "outputs": 1,
-        "x": 450,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "1dabe45065eb76c3"
+            ]
+        ]
+    },
+    {
+        "id": "2f2724bc2ee73b02",
+        "type": "debug",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8925a9fa33e768f6",
+        "type": "json",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 630,
+        "y": 400,
+        "wires": [
+            [
+                "2f2724bc2ee73b02"
+            ]
+        ]
+    },
+    {
+        "id": "52b927965abd6e19",
+        "type": "comment",
+        "z": "b20fd8e77bdb81fc",
+        "g": "19e58d5ef2e60152",
+        "name": "test user register",
+        "info": "",
+        "x": 680,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "652d95f8abc72a32",
+        "type": "change",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "set API token",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.authorization",
+                "pt": "msg",
+                "to": "Bearer e6f654ee2eaedfee98f3c9f6962593487de780121600adf3b1bc227a1a5f8a24e986bed3b2f83faec02a748fbdd6509d7c709e8379faaf3b4454ad4a9d9d44d4704e340fd5e25e51c800cb802f11192b297ccf1410c863265e956d79254361d52f2a0751406eebc8cd59d7fe8389e7e46d5da5c5383f4736333fa0f208732a79",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "e3ad2be66f665d5f",
+                "a4dd08b8d9799acf"
+            ]
+        ]
+    },
+    {
+        "id": "f2de41c8777a3241",
+        "type": "inject",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 540,
+        "wires": [
+            [
+                "652d95f8abc72a32"
+            ]
+        ]
+    },
+    {
+        "id": "e3ad2be66f665d5f",
+        "type": "debug",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ce19a0758e52cc89",
+        "type": "http request",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://kokoscms:1337/api/auth/local/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 670,
+        "y": 720,
+        "wires": [
+            [
+                "f0c214cf6e1aaf11"
+            ]
+        ]
+    },
+    {
+        "id": "a4dd08b8d9799acf",
+        "type": "change",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "set content type",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers[\"Content-Type\"]",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 720,
+        "wires": [
+            [
+                "bdce80feccfdb9da"
+            ]
+        ]
+    },
+    {
+        "id": "bdce80feccfdb9da",
+        "type": "function",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "test user info",
+        "func": "msg.payload = {\n    identifier: \"aaa2@bbb.cc\",\n    password: \"sdsfafsafsadf\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "ce19a0758e52cc89"
+            ]
+        ]
+    },
+    {
+        "id": "662fcc2c8f38684c",
+        "type": "debug",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f0c214cf6e1aaf11",
+        "type": "json",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 570,
+        "y": 780,
+        "wires": [
+            [
+                "662fcc2c8f38684c",
+                "6cb87f3dbfad957c"
+            ]
+        ]
+    },
+    {
+        "id": "aff7baf18cf9862b",
+        "type": "comment",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "test user login",
+        "info": "",
+        "x": 670,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "6cb87f3dbfad957c",
+        "type": "function",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "decode jwt token",
+        "func": "let token = msg.payload.jwt;\n\nmsg.payload = jwtDecodePack.jwtDecode(token);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwtDecodePack",
+                "module": "jwt-decode"
+            }
+        ],
+        "x": 810,
+        "y": 780,
+        "wires": [
+            [
+                "2ba81f7be1fdbb35"
+            ]
+        ]
+    },
+    {
+        "id": "2ba81f7be1fdbb35",
+        "type": "debug",
+        "z": "b20fd8e77bdb81fc",
+        "g": "409a4189e373686a",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "1a82fdfe9325a495",
+        "type": "change",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "set API token",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.authorization",
+                "pt": "msg",
+                "to": "Bearer e6f654ee2eaedfee98f3c9f6962593487de780121600adf3b1bc227a1a5f8a24e986bed3b2f83faec02a748fbdd6509d7c709e8379faaf3b4454ad4a9d9d44d4704e340fd5e25e51c800cb802f11192b297ccf1410c863265e956d79254361d52f2a0751406eebc8cd59d7fe8389e7e46d5da5c5383f4736333fa0f208732a79",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
         "y": 180,
         "wires": [
-            []
+            [
+                "646b245fa3c455de",
+                "f764108a592e8d0f"
+            ]
         ]
+    },
+    {
+        "id": "646b245fa3c455de",
+        "type": "debug",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "39f67586bc0e3696",
+        "type": "http request",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://kokoscms:1337/api/auth/local/register",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "0577b6708402b46b"
+            ]
+        ]
+    },
+    {
+        "id": "f764108a592e8d0f",
+        "type": "change",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "set content type",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers[\"Content-Type\"]",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "b9eb03f06ba17c42"
+            ]
+        ]
+    },
+    {
+        "id": "b9eb03f06ba17c42",
+        "type": "function",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "test user info",
+        "func": "msg.payload = {\n    username: \"aaaaa2\",\n    email: \"aaa2@bbb.cc\",\n    password: \"sdsfafsafsadf\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "39f67586bc0e3696"
+            ]
+        ]
+    },
+    {
+        "id": "dc655895af452377",
+        "type": "debug",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0577b6708402b46b",
+        "type": "json",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "dc655895af452377",
+                "7e8cb3e6b75249f2"
+            ]
+        ]
+    },
+    {
+        "id": "2e1dedf23237c21a",
+        "type": "comment",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "user register endpoint",
+        "info": "",
+        "x": 660,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "11c3bd8f4b44fe4e",
+        "type": "http in",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "",
+        "url": "/api/v0/user/register",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "1a82fdfe9325a495"
+            ]
+        ]
+    },
+    {
+        "id": "f339a3ab994bcf24",
+        "type": "change",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "set API token",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.authorization",
+                "pt": "msg",
+                "to": "Bearer e6f654ee2eaedfee98f3c9f6962593487de780121600adf3b1bc227a1a5f8a24e986bed3b2f83faec02a748fbdd6509d7c709e8379faaf3b4454ad4a9d9d44d4704e340fd5e25e51c800cb802f11192b297ccf1410c863265e956d79254361d52f2a0751406eebc8cd59d7fe8389e7e46d5da5c5383f4736333fa0f208732a79",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "4f47ce7485273061",
+                "e3559e06f45c5877"
+            ]
+        ]
+    },
+    {
+        "id": "4f47ce7485273061",
+        "type": "debug",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4aacb85b86a333bc",
+        "type": "http request",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://kokoscms:1337/api/auth/local/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 680,
+        "wires": [
+            [
+                "ba15ed6b6ccca963"
+            ]
+        ]
+    },
+    {
+        "id": "e3559e06f45c5877",
+        "type": "change",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "set content type",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers[\"Content-Type\"]",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 680,
+        "wires": [
+            [
+                "689450b22fd54c22"
+            ]
+        ]
+    },
+    {
+        "id": "689450b22fd54c22",
+        "type": "function",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "test user info",
+        "func": "msg.payload = {\n    identifier: \"aaa2@bbb.cc\",\n    password: \"sdsfafsafsadf\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "4aacb85b86a333bc"
+            ]
+        ]
+    },
+    {
+        "id": "4ea9988ec54bd9ac",
+        "type": "debug",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ba15ed6b6ccca963",
+        "type": "json",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 800,
+        "wires": [
+            [
+                "4ea9988ec54bd9ac",
+                "75c46cc406ce5196"
+            ]
+        ]
+    },
+    {
+        "id": "e7a82945fdd83c5e",
+        "type": "comment",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "test user login",
+        "info": "",
+        "x": 630,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "974dd2d29e54b79c",
+        "type": "http in",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "",
+        "url": "/api/v0/user/login",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 520,
+        "wires": [
+            [
+                "f339a3ab994bcf24"
+            ]
+        ]
+    },
+    {
+        "id": "7e8cb3e6b75249f2",
+        "type": "http response",
+        "z": "24167006ba3855bc",
+        "g": "8373f38641d4c1d9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "75c46cc406ce5196",
+        "type": "http response",
+        "z": "24167006ba3855bc",
+        "g": "18d4938afab28b78",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 680,
+        "wires": []
     }
 ]
